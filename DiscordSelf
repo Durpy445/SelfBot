@@ -36,7 +36,7 @@ RandomString = function(){
 }
 
 client.on('messageCreate', async (message) => {
- if (message.mentions.has(client.user)  && message.content.includes("<@569611563745542174>")) {
+ if (message.mentions.has(client.user)  && message.content.includes("<@569611563745542174>")) { //Replace 569611563745542174 with your discord ID
   //Admin Commands
   if (message.author.id == client.user.id){
     console.log("Hi")
