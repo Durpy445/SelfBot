@@ -7,7 +7,9 @@ const client = new Client({
     Intents.FLAGS.MESSAGE_CONTENT
   ]
 });
-const Token = fs.readFileSync('Token.txt').toString()
+
+let Token = fs.readFileSync('Token.txt', 'utf-8');
+Token = Token.split('\n').filter(line => line.trim() !== '').join('\n');
 
 let AllowedChannelIDs = []
 let TempAllowed= []
